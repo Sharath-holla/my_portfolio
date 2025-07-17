@@ -1,34 +1,46 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
-    function myMenuFunction(){
-      var menuBtn = document.getElementById("myNavMenu");
+// Toggle responsive class on mobile menu button click
+function myMenuFunction() {
+  var menuBtn = document.getElementById("myNavMenu");
 
-      if(menuBtn.className === "nav-menu"){
-        menuBtn.className += " responsive";
-      } else {
-        menuBtn.className = "nav-menu";
-      }
+  if (menuBtn.className === "nav-menu") {
+    menuBtn.className += " responsive";
+  } else {
+    menuBtn.className = "nav-menu";
+  }
+}
+
+// ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING -----
+window.onscroll = function() {
+  headerShadow();
+};
+
+function headerShadow() {
+  const navHeader = document.getElementById("header");
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+    navHeader.style.height = "70px";
+    navHeader.style.lineHeight = "70px";
+  } else {
+    navHeader.style.boxShadow = "none";
+    navHeader.style.height = "90px";
+    navHeader.style.lineHeight = "90px";
+  }
+}
+
+// ----- CLOSE NAV MENU WHEN A LINK IS CLICKED (MOBILE FIX) -----
+const navLinks = document.querySelectorAll('.nav-link');
+const menuBtn = document.getElementById('myNavMenu');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (menuBtn.classList.contains('responsive')) {
+      menuBtn.classList.remove('responsive');
     }
+  });
+});
 
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-    window.onscroll = function() {headerShadow()};
-
-    function headerShadow() {
-      const navHeader =document.getElementById("header");
-
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
-
-        navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-        navHeader.style.height = "70px";
-        navHeader.style.lineHeight = "70px";
-
-      } else {
-
-        navHeader.style.boxShadow = "none";
-        navHeader.style.height = "90px";
-        navHeader.style.lineHeight = "90px";
-
-      }
-    }
 
 
 /* ----- TYPING EFFECT ----- */

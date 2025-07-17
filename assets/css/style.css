@@ -270,7 +270,8 @@ nav{
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 .scroll-btn i{
-    font-size: 20px;
+    font-size: 14px;
+    margin-top: 2rem;
 }
 
 /* ----- MAIN BOX ----- */
@@ -662,7 +663,7 @@ footer{
 
 @media only screen and (max-width: 540px){
     .featured-name{
-        font-size: 40px;
+        font-size: 32px;
     }
     .project-box{
         width: 100%;
