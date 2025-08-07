@@ -30,7 +30,7 @@ Other Skills: API Integration, Responsive Design, Prompt Engineering, Data Struc
 
 ✅ Clean, responsive UI
 
-🔗 Live Portfolio-
+🔗 https://sharath-holla.github.io/my_portfolio/
 Click here to view my live portfolio
 
 🚀 Featured Projects
